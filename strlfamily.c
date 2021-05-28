@@ -42,7 +42,7 @@ static unsigned int	ft_src_length(char *src)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -63,7 +63,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (i + src_size);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	unsigned int	i;
 

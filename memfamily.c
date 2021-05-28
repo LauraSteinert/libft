@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*alt;	
@@ -29,7 +29,7 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 	return (dest);
 }
 
-void	*ft_memccpy( void *dest, const void *src, int c, unsigned int cnt)
+void	*ft_memccpy( void *dest, const void *src, int c, size_t cnt)
 {
 	unsigned int	i;
 	unsigned char	*alt;	

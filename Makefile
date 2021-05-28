@@ -1,12 +1,14 @@
 #	Makefile for libft program. 
 
+#
 #	Variables
+#
 
 #	File name
 NAME=libft.a
-# .c files
+
+# include path
 INCLUDES=./
-# .h files
 
 # Objects
 OBJECTS= atoiandbzero.o \
@@ -16,7 +18,9 @@ OBJECTS= atoiandbzero.o \
 		 strfamily.o \
 		 strlfamily.o \
 		 tofamily.o \
-		 mem.o
+		 mem.o \
+		 strup.o \
+		 calloc.c
 # Compiler 
 CC=gcc
 

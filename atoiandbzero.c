@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(char *str)
 {
 	int			i;
@@ -36,7 +38,7 @@ int	ft_atoi(char *str)
 	return (((int)value) * sign);
 }
 
-void	ft_bzero(void *s, unsigned int n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*alt;

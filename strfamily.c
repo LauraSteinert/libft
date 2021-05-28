@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *str, int c)
 {
 	int			i;
@@ -60,23 +62,23 @@ char	*ft_strrchr(const char *str, int c)
 	return ((void *)pointer);
 }
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
-	unsigned int	valor;
+	unsigned int	value;
 
 	i = 0;
-	valor = 0;
+	value = 0;
 	if (n > 0)
 	{
 		while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
 			i++;
-		valor = (-(s2[i] - s1[i]));
+		value = (-(s2[i] - s1[i]));
 	}
-	return (valor);
+	return (value);
 }
 
-char	*ft_strnstr(const char	*big, const char *little, unsigned int len)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
 	unsigned int		i;
 	int					j;
