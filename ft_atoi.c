@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoiandbzero.c                                     :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsteiner <lsteiner@students.42sp.org.br>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 22:10:50 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/05/26 22:10:50 by lsteiner         ###   ########.fr       */
+/*   Created: 2021/05/29 18:28:20 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/05/29 18:28:20 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,4 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (((int)value) * sign);
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	unsigned int	i;
-	unsigned char	*alt;
-
-	i = 0;
-	alt = (unsigned char *)s;
-	while (i <= n - 1)
-	{
-		alt[i] = '\0';
-		i++;
-	}
 }

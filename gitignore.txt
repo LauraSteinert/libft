@@ -1,0 +1,6 @@
+atoitest.c
+libftTester/
+memeteste.c
+testdostrch.c
+testes.c
+a.out

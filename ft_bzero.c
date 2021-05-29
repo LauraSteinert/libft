@@ -1,47 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mem.c                                              :+:      :+:    :+:   */
+/*   atoiandbzero.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsteiner <lsteiner@students.42sp.org.br>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 12:42:49 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/05/27 12:42:49 by lsteiner         ###   ########.fr       */
+/*   Created: 2021/05/26 22:10:50 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/05/26 22:10:50 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int	i;
-	unsigned char	*alt;	
-	unsigned char	*org;
+	unsigned char	*alt;
 
 	i = 0;
-	org = (unsigned char *)src;
-	alt = (unsigned char *)dest;
+	alt = (unsigned char *)s;
 	while (i <= n - 1)
 	{
-		alt[i] = org[i];
+		alt[i] = '\0';
 		i++;
 	}
-	return (dest);
-}
-
-void	*ft_memccpy( void *dest, const void *src, int c, size_t cnt)
-{
-	unsigned int	i;
-	unsigned char	*alt;	
-	unsigned char	*org;
-
-	i = 0;
-	org = (unsigned char *)src;
-	alt = (unsigned char *)dest;
-	while (i <= cnt - 1 && org[i] != c)
-	{
-		alt[i] = org[i];
-		i++;
-	}
-	return (dest);
 }

@@ -11,16 +11,25 @@ NAME=libft.a
 INCLUDES=./
 
 # Objects
-OBJECTS= atoiandbzero.o \
-		 memset.o \
-		 memfamily.o \
+OBJECTS= ft_atoi.o \
+		 ft_bzero.o \
+		 ft_memset.o \
+		 ft_memcpy.o \
+		 ft_memccpy.o \
+		 ft_memmove.o \
+		 ft_memchr.o \
+		 ft_memcmp.o \
+		 ft_strlen.o \
 		 isfamily.o \
-		 strfamily.o \
-		 strlfamily.o \
-		 tofamily.o \
-		 mem.o \
-		 strup.o \
-		 calloc.c
+		 ft_strlcpy.o \
+		 ft_strlcat.o \
+		 ft_strchr.o \
+		 ft_strrchr.o \
+		 ft_strnstr.o \
+		 ft_strncmp.o \
+		 ft_toupper.o \
+		 ft_tolower.o
+
 # Compiler 
 CC=gcc
 

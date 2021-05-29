@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	size;
-
-	size = 0;
-	while (str[size])
-		size++;
-	return (size);
-}
-
 static unsigned int	ft_dest_length(char *dest, unsigned int size)
 {
 	unsigned int	i;
@@ -61,24 +51,4 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 		dest[i + j] = '\0';
 	}
 	return (i + src_size);
-}
-
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
-{
-	unsigned int	i;
-
-	i = 0;
-	size = size - 1;
-	if (size != 0)
-	{
-		while (i < size && src[i] != '\0')
-		{
-			dest[i] = src[i];
-			i++;
-		}
-	}
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	return (i);
 }

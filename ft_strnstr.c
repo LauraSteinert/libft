@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tofamily.c                                         :+:      :+:    :+:   */
+/*   strfamily.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsteiner <lsteiner@students.42sp.org.br>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 10:58:28 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/05/24 10:58:28 by lsteiner         ###   ########.fr       */
+/*   Created: 2021/05/26 18:57:31 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/05/26 18:57:31 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-	if ((c >= 'a') && (c <= 'z'))
-		c = c - 32;
-	return (c);
-}
+	unsigned int		i;
+	int					j;
 
-int	ft_tolower(int c)
-{
-	if ((c >= 'A') && (c <= 'Z'))
-		c = c + 32;
-	return (c);
+	i = 0;
+	j = 0;
+	if (little[0] == '\0')
+		return ((void *) big);
+	while (big[i] != '\0' && i < len - 1)
+	{
+		if (big[i] == little[j])
+		{
+			while (big[i + j] == little[j])
+			{
+				j++;
+				if (!little[j])
+					return ((void *) &big[i]);
+			}
+			j = 0;
+		}
+		i++;
+	}
+	return (0);
 }
