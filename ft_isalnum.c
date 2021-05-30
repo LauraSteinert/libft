@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsteiner <lsteiner@students.42sp.org.br>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 18:24:50 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/05/29 18:24:50 by lsteiner         ###   ########.fr       */
+/*   Created: 2021/05/30 17:46:42 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/05/30 17:46:42 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+int	ft_isalnum(int alph)
 {
-	char	*alt;
-	char	*end;
-
-	alt = (char *)str;
-	end = (char *)str + n;
-	if (str == 0)
-		return (NULL);
-	while (alt < end)
-	{
-		if (*alt == (char)c)
-			return (alt);
-		alt++;
-	}
-	return (NULL);
+	if (alph >= 65 && alph <= 90)
+		return (1);
+	else if (alph >= 97 && alph <= 122)
+		return (1);
+	else if (alph >= 48 && alph <= 57)
+		return (1);
+	return (0);
 }

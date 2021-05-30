@@ -7,28 +7,34 @@
 #	File name
 NAME=libft.a
 
-# include path
-# INCLUDES=./
-
+# Source files 
+SRC=ft_atoi.c \
+		 ft_bzero.c \
+		 ft_memset.c \
+		 ft_memcpy.c \
+		 ft_memccpy.c \
+		 ft_memmove.c \
+		 ft_memchr.c \
+		 ft_memcmp.c \
+		 ft_strlen.c \
+		 ft_strlcpy.c \
+		 ft_strlcat.c \
+		 ft_strchr.c \
+		 ft_strrchr.c \
+		 ft_strnstr.c \
+		 ft_strncmp.c \
+		 ft_toupper.c \
+		 ft_tolower.c \
+		 ft_strjoin.c \
+		 ft_substr.c \
+		 ft_strdup.c  \
+		 ft_isascii.c \
+		 ft_isdigit.c \
+		 ft_isalpha.c \
+		 ft_isprint.c \
+		 ft_isalnum.c
 # Objects
-OBJECTS= ft_atoi.o \
-		 ft_bzero.o \
-		 ft_memset.o \
-		 ft_memcpy.o \
-		 ft_memccpy.o \
-		 ft_memmove.o \
-		 ft_memchr.o \
-		 ft_memcmp.o \
-		 ft_strlen.o \
-		 isfamily.o \
-		 ft_strlcpy.o \
-		 ft_strlcat.o \
-		 ft_strchr.o \
-		 ft_strrchr.o \
-		 ft_strnstr.o \
-		 ft_strncmp.o \
-		 ft_toupper.o \
-		 ft_tolower.o
+OBJECTS=$(SRC:.c=.o)
 
 # Compiler 
 CC=gcc
@@ -45,9 +51,10 @@ DEP=libft.h
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $@ $^
+	ar rcs $(NAME) $(OBJECTS)
+	@echo "$(NAME) created"
 
-%.o: %.c $(DEPS)
+%.o: %.c 
 	$(CC) $(FLAGS) $< -c -o $@
 
 clean:

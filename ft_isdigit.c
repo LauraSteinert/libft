@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsteiner <lsteiner@students.42sp.org.br>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 18:24:50 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/05/29 18:24:50 by lsteiner         ###   ########.fr       */
+/*   Created: 2021/05/30 17:46:09 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/05/30 17:46:09 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+int	ft_isdigit(int number)
 {
-	char	*alt;
-	char	*end;
-
-	alt = (char *)str;
-	end = (char *)str + n;
-	if (str == 0)
-		return (NULL);
-	while (alt < end)
-	{
-		if (*alt == (char)c)
-			return (alt);
-		alt++;
-	}
-	return (NULL);
+	if (number >= 48 && number <= 57)
+		return (1);
+	return (0);
 }

@@ -12,28 +12,22 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	int			found;
-	const char	*pointer;
+	size_t			len;
+	unsigned char	search;
+	unsigned char	*s_cpy;
 
-	i = 0;
-	found = 0;
-	while (str[i])
-		i++;
-	while (str[i] >= 0 && found == 0)
+	len = ft_strlen(s);
+	s_cpy = (unsigned char *)s;
+	search = (unsigned char)c;
+	if (*s_cpy == search)
+		return ((char *)s_cpy);
+	while (len)
 	{
-		if (str[i] == c)
-		{
-			pointer = &str[i];
-			found = 1;
-		}
-		else
-		{
-			i--;
-			pointer = 0;
-		}
+		if (s_cpy[len] == search)
+			return ((char *)s + len);
+		len--;
 	}
-	return ((void *)pointer);
+	return (NULL);
 }

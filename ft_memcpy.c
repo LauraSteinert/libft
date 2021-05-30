@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	org = (unsigned char *)src;
 	alt = (unsigned char *)dest;
-	while (i <= n)
+	while (i < n)
 	{
 		alt[i] = org[i];
 		i++;

@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   isfamily.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsteiner <lsteiner@students.42sp.org.br>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 18:24:50 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/05/29 18:24:50 by lsteiner         ###   ########.fr       */
+/*   Created: 2021/05/22 15:28:31 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/05/22 15:28:31 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+int	ft_isprint(int c)
 {
-	char	*alt;
-	char	*end;
-
-	alt = (char *)str;
-	end = (char *)str + n;
-	if (str == 0)
-		return (NULL);
-	while (alt < end)
-	{
-		if (*alt == (char)c)
-			return (alt);
-		alt++;
-	}
-	return (NULL);
+	if (((c >= 0) && (c <= 31)) || (c == 127))
+		return (0);
+	return (1);
 }
