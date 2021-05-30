@@ -8,7 +8,7 @@
 NAME=libft.a
 
 # include path
-INCLUDES=./
+# INCLUDES=./
 
 # Objects
 OBJECTS= ft_atoi.o \
