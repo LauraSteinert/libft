@@ -15,19 +15,20 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
-	unsigned int	j;
 	char			*new;
 
-	i = start;
-	j = 0;
+	if (s == NULL)
+		return (NULL);
+	i = 0;
 	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new)
 		return (NULL);
-	while (i < len)
+	while (i < len && s[start] != '\0')
 	{
-		new[j] = s[i];
+		new[i] = s[start];
+		start++;
 		i++;
-		j++;
 	}
+	new[i] = '\0';
 	return (new);
 }
