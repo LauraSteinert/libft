@@ -18,16 +18,15 @@ char	*ft_strrchr(const char *s, int c)
 	unsigned char	search;
 	unsigned char	*s_cpy;
 
-	len = ft_strlen(s);
+	if (s == NULL)
+		return (NULL);
+	len = ft_strlen(s) + 1;
 	s_cpy = (unsigned char *)s;
 	search = (unsigned char)c;
-	if (*s_cpy == search)
-		return ((char *)s_cpy);
-	while (len)
+	while (len--)
 	{
 		if (s_cpy[len] == search)
 			return ((char *)s + len);
-		len--;
 	}
 	return (NULL);
 }

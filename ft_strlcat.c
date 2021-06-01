@@ -22,7 +22,7 @@ static unsigned int	ft_dest_length(char *dest, unsigned int size)
 	return (i);
 }
 
-static unsigned int	ft_src_length(char *src)
+static unsigned int	ft_src_length(const char *src)
 {
 	unsigned int	i;
 
@@ -32,7 +32,7 @@ static unsigned int	ft_src_length(char *src)
 	return (i);
 }
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	j;
