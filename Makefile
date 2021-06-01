@@ -32,7 +32,13 @@ SRC=ft_atoi.c \
 		 ft_isdigit.c \
 		 ft_isalpha.c \
 		 ft_isprint.c \
-		 ft_isalnum.c
+		 ft_isalnum.c \
+		 ft_split.c \
+		 ft_itoa.c \
+		 ft_putchar_fd.c \
+		 ft_putstr_fd.c \
+		 ft_putnbr_fd.c \
+		 ft_strmapi.c
 # Objects
 OBJECTS=$(SRC:.c=.o)
 
