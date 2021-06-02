@@ -14,8 +14,26 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*s;
+	char	s[11];
+	int		counter;
+	int		i;
 
-	s = ft_itoa(n);
+	i = 1;
+	counter = n / 10;
+	while (counter)
+	{
+		counter /= 10;
+		i++;
+	}
+	if (n < 0)
+		ft_putchar_fd('-', fd);
+	else
+		n *= -1;
+	s[i] = '\0';
+	while (i--)
+	{
+		s[i] = ((n % 10) * -1) + '0';
+		n /= 10;
+	}
 	ft_putstr_fd(s, fd);
 }

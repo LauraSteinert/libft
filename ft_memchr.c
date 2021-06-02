@@ -19,8 +19,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 	alt = (char *)str;
 	end = (char *)str + n;
-	if (str == 0)
-		return (NULL);
 	while (alt < end)
 	{
 		if (*alt == (char)c)

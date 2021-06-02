@@ -38,8 +38,11 @@ SRC=ft_atoi.c \
 		 ft_putchar_fd.c \
 		 ft_putstr_fd.c \
 		 ft_putnbr_fd.c \
-		 ft_strmapi.c
-
+		 ft_strmapi.c \
+		 ft_calloc.c \
+		 ft_putendl_fd.c \
+		 ft_strtrim.c 
+		 
 BON= ft_lstnew.c \
 	 ft_lstadd_front.c \
 	 ft_lstsize.c \
@@ -84,3 +87,8 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+so: $(OBJECTS)
+	@echo "Building $(NAME:.a=.so)"
+	@$(CC) $(FLAGS) -shared -fpic $^ -o $(NAME:.a=.so)
+	@echo "Done."

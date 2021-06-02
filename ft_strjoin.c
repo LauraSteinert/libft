@@ -32,6 +32,15 @@ static unsigned int	ft_src_length(char const *s2)
 	return (i);
 }
 
+static void	copy_s1(char const *s1, char *new, int i)
+{
+	while (s1[i] != '\0')
+	{
+		new[i] = s1[i];
+		i++;
+	}
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
@@ -39,18 +48,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len2;
 	char	*new;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	i = 0;
 	len1 = ft_dest_length(s1);
 	len2 = ft_src_length(s2);
 	new = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
 	if (new == NULL)
 		return (NULL);
-	while (s1[i] != '\0')
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	i = 0;
+	copy_s1(s1, new, i);
 	while (s2[i] != '\0')
 	{
 		new[len1] = s2[i];

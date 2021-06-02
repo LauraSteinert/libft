@@ -1,10 +1,10 @@
 .gitignore
 atoitest.c
-libftTester/
+#libftTester/
 memeteste.c
 testdostrch.c
 testes.c
 a.out
-libft-war-machine/
+#libft-war-machine/
 partedois.c
 libft.a

@@ -12,13 +12,9 @@
 
 #include "libft.h"
 
-int	ft_isalnum(int alph)
+int	ft_isalnum(int c)
 {
-	if (alph >= 65 && alph <= 90)
-		return (1);
-	else if (alph >= 97 && alph <= 122)
-		return (1);
-	else if (alph >= 48 && alph <= 57)
+	if ((ft_isalpha(c)) || (ft_isdigit(c)))
 		return (1);
 	return (0);
 }
