@@ -1,3 +1,4 @@
+.gitignore
 atoitest.c
 libftTester/
 memeteste.c
@@ -6,4 +7,4 @@ testes.c
 a.out
 libft-war-machine/
 partedois.c
-.gitignore
+libft.a
