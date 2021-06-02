@@ -55,7 +55,7 @@ BON= ft_lstnew.c \
 
 # Objects
 OBJECTS=$(SRC:.c=.o)
-
+BONOBJECTS=$(BON:.c=.o)
 # Compiler 
 CC=gcc
 
@@ -77,16 +77,16 @@ $(NAME): $(OBJECTS)
 %.o: %.c 
 	$(CC) $(FLAGS) $< -c -o $@
 
-bonus:	$(BON) $(NAME)
-	ar rcs $(NAME) $(BON)	
+bonus:	$(BONOBJECTS)
+	ar rcs $(NAME) $(BONOBJECTS)	
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(BONOBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-so: $(OBJECTS)
-	@$(CC) $(FLAGS) -shared -fpic $^ -o $(NAME:.a=.so)
+so: $(OBJECTS) $(BONOBJECTS)
+	@$(CC) $(FLAGS) -shared -fpic $(OBJECTS) $(BONOBJECTS) -o $(NAME:.a=.so)
