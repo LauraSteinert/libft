@@ -89,6 +89,4 @@ fclean: clean
 re: fclean all
 
 so: $(OBJECTS)
-	@echo "Building $(NAME:.a=.so)"
 	@$(CC) $(FLAGS) -shared -fpic $^ -o $(NAME:.a=.so)
-	@echo "Done."
