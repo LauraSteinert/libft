@@ -5,7 +5,7 @@ My first C library. Made for 42sp.
 ## General info
 The aim of this project is to code a C library regrouping usual functions thatyou’ll be allowed to use in other projects.
 
-## List of Functions
+### List of Functions
 
 Functions asked on the project. The "Mandatory" and "Additional" functions are related to actual functions from different C libraries. The "Bonus" ones are related to Linked Lists. 
 
@@ -24,7 +24,7 @@ Functions asked on the project. The "Mandatory" and "Additional" functions are r
 | ft_strchr        | ft_tolower    |      -       |       -         |
 | ft_calloc        | ft_strdup     |      -       |       -         |
 
-## Makefile
+### Makefile
 
 List of commands from the Makefile.
 
