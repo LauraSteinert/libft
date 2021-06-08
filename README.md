@@ -18,6 +18,6 @@ The aim of this project is to code a C library regrouping usual functions thatyo
 | ft_memcmp        | ft_isalnum    | ft_putchar_fd| ft_lstclear     |
 | ft_strlen        | ft_isascii    | ft_putstr_fd | ft_lstiter      |
 | ft_strlcpy       | ft_isprint    | ft_putendl_fd| ft_lstmap       |
-| ft_strlcat       | ft_toupper    | ft_putnbr_fd |                 |
-| ft_strchr        | ft_tolower    |              |                 |
-| ft_calloc        | ft_strdup     |              |                 |
+| ft_strlcat       | ft_toupper    | ft_putnbr_fd |       -         |
+| ft_strchr        | ft_tolower    |      -       |       -         |
+| ft_calloc        | ft_strdup     |      -       |       -         |
