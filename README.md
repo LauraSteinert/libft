@@ -1,6 +1,6 @@
 # libft
 
-## My first C library. Made for 42sp.
+My first C library. Made for 42sp.
 
 ## General info
 The aim of this project is to code a C library regrouping usual functions thatyou’ll be allowed to use in other projects.
