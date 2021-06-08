@@ -21,3 +21,11 @@ The aim of this project is to code a C library regrouping usual functions thatyo
 | ft_strlcat       | ft_toupper    | ft_putnbr_fd |       -         |
 | ft_strchr        | ft_tolower    |      -       |       -         |
 | ft_calloc        | ft_strdup     |      -       |       -         |
+
+## Makefile
+
+| Command       | Meaning                                                    |
+| ------------- |:----------------------------------------------------------:| 
+| make          | Makes the library with all the functions.                  |
+| make clean    | Erases the objects files.                                  |
+| make re       | Calls "fclean" rule, followed by "all".                    |
