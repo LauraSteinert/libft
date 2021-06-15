@@ -41,7 +41,7 @@ SRC=ft_atoi.c \
 		 ft_strmapi.c \
 		 ft_calloc.c \
 		 ft_putendl_fd.c \
-		 ft_strtrim.c 
+		 ft_strtrim.c
 		 
 BON= ft_lstnew.c \
 	 ft_lstadd_front.c \
@@ -51,7 +51,8 @@ BON= ft_lstnew.c \
 	 ft_lstdelone.c \
 	 ft_lstclear.c \
 	 ft_lstiter.c \
-	 ft_lstmap.c 
+	 ft_lstmap.c \
+	 get_next_line.c
 
 # Objects
 OBJECTS=$(SRC:.c=.o)
