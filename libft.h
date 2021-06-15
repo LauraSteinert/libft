@@ -66,4 +66,18 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 8
+# endif
+
+# if BUFFER_SIZE <= 0
+#  error BUFFER_SIZE needs to be a positive number.
+# endif
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 8
+# endif
+
+int		get_next_line(int fd, char **line);
+
 #endif 
