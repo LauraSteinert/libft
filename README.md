@@ -7,7 +7,7 @@ The aim of this project is to code a C library regrouping usual functions thatyo
 
 ### List of Functions
 
-Functions asked on the project. The "Mandatory" and "Additional" functions are related to actual functions from different C libraries. The "Bonus" ones are related to Linked Lists, and "get_next_line" is a project on it's one, where we can read an intire file or from standard input.
+Functions asked on the project. The "Mandatory" and "Additional" functions are related to actual functions from different C libraries. The "Bonus" ones are related to Linked Lists, and "get_next_line" is a project on its own, where we can read an intire file or from standard input.
 
 | Mandatory        | Mandatory     | Additional   | Bonus           |
 | ---------------- |:-------------:| -----------: | ---------------:| 
