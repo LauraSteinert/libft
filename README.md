@@ -7,7 +7,7 @@ The aim of this project is to code a C library regrouping usual functions thatyo
 
 ### List of Functions
 
-Functions asked on the project. The "Mandatory" and "Additional" functions are related to actual functions from different C libraries. The "Bonus" ones are related to Linked Lists. 
+Functions asked on the project. The "Mandatory" and "Additional" functions are related to actual functions from different C libraries. The "Bonus" ones are related to Linked Lists, and "get_next_line" is a project on its own, where we can read an intire file or from standard input.
 
 | Mandatory        | Mandatory     | Additional   | Bonus           |
 | ---------------- |:-------------:| -----------: | ---------------:| 
@@ -20,7 +20,7 @@ Functions asked on the project. The "Mandatory" and "Additional" functions are r
 | ft_memcmp        | ft_isalnum    | ft_putchar_fd| ft_lstclear     |
 | ft_strlen        | ft_isascii    | ft_putstr_fd | ft_lstiter      |
 | ft_strlcpy       | ft_isprint    | ft_putendl_fd| ft_lstmap       |
-| ft_strlcat       | ft_toupper    | ft_putnbr_fd |       -         |
+| ft_strlcat       | ft_toupper    | ft_putnbr_fd | get_next_line   |
 | ft_strchr        | ft_tolower    |      -       |       -         |
 | ft_calloc        | ft_strdup     |      -       |       -         |
 
