@@ -8,51 +8,50 @@
 NAME=libft.a
 
 # Source files 
-SRC=ft_atoi.c \
-		 ft_bzero.c \
-		 ft_memset.c \
-		 ft_memcpy.c \
-		 ft_memccpy.c \
-		 ft_memmove.c \
-		 ft_memchr.c \
-		 ft_memcmp.c \
-		 ft_strlen.c \
-		 ft_strlcpy.c \
-		 ft_strlcat.c \
-		 ft_strchr.c \
-		 ft_strrchr.c \
-		 ft_strnstr.c \
-		 ft_strncmp.c \
-		 ft_toupper.c \
-		 ft_tolower.c \
-		 ft_strjoin.c \
-		 ft_substr.c \
-		 ft_strdup.c  \
-		 ft_isascii.c \
-		 ft_isdigit.c \
-		 ft_isalpha.c \
-		 ft_isprint.c \
-		 ft_isalnum.c \
-		 ft_split.c \
-		 ft_itoa.c \
-		 ft_putchar_fd.c \
-		 ft_putstr_fd.c \
-		 ft_putnbr_fd.c \
-		 ft_strmapi.c \
-		 ft_calloc.c \
-		 ft_putendl_fd.c \
-		 ft_strtrim.c
-		 
-BON= ft_lstnew.c \
-	 ft_lstadd_front.c \
-	 ft_lstsize.c \
-	 ft_lstlast.c \
-	 ft_lstadd_back.c \
-	 ft_lstdelone.c \
-	 ft_lstclear.c \
-	 ft_lstiter.c \
-	 ft_lstmap.c \
-	 get_next_line.c
+SRC=./source/ft_atoi.c \
+		 ./source/ft_bzero.c \
+		 ./source/ft_memset.c \
+		 ./source/ft_memcpy.c \
+		 ./source/ft_memccpy.c \
+		 ./source/ft_memmove.c \
+		 ./source/ft_memchr.c \
+		 ./source/ft_memcmp.c \
+		 ./source/ft_strlen.c \
+		 ./source/ft_strlcpy.c \
+		 ./source/ft_strlcat.c \
+		 ./source/ft_strchr.c \
+		 ./source/ft_strrchr.c \
+		 ./source/ft_strnstr.c \
+		 ./source/ft_strncmp.c \
+		 ./source/ft_toupper.c \
+		 ./source/ft_tolower.c \
+		 ./source/ft_strjoin.c \
+		 ./source/ft_substr.c \
+		 ./source/ft_strdup.c  \
+		 ./source/ft_isascii.c \
+		 ./source/ft_isdigit.c \
+		 ./source/ft_isalpha.c \
+		 ./source/ft_isprint.c \
+		 ./source/ft_isalnum.c \
+		 ./source/ft_split.c \
+		 ./source/ft_itoa.c \
+		 ./source/ft_putchar_fd.c \
+		 ./source/ft_putstr_fd.c \
+		 ./source/ft_putnbr_fd.c \
+		 ./source/ft_strmapi.c \
+		 ./source/ft_calloc.c \
+		 ./source/ft_putendl_fd.c \
+		 ./source/ft_strtrim.c \
+		 ./source/ft_lstnew.c \
+	 	 ./source/ft_lstadd_front.c \
+	 	 ./source/ft_lstsize.c \
+	 	 ./source/ft_lstlast.c \
+	 	 ./source/ft_lstadd_back.c \
+	 	 ./source/ft_lstdelone.c \
+	 	 ./source/ft_lstclear.c \
+	  	 ./source/ft_lstiter.c \
+	  	 ./source/ft_lstmap.c \
+	  	 ./source/get_next_line.c
 
 # Objects
 OBJECTS=$(SRC:.c=.o)
@@ -72,20 +71,20 @@ DEP=libft.h
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	@ar rcs $(NAME) $(OBJECTS)
 	@echo "$(NAME) created"
 
-%.o: %.c 
-	$(CC) $(FLAGS) $< -c -o $@
+%.o: ./source/%.c ./source/%.h
+	@$(CC) $(FLAGS) $< -c -o $@
 
 bonus:	$(BONOBJECTS)
-	ar rcs $(NAME) $(BONOBJECTS)	
+	@ar rcs $(NAME) $(BONOBJECTS)	
 
 clean:
-	rm -f $(OBJECTS) $(BONOBJECTS)
+	@rm -f $(OBJECTS) $(BONOBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
