@@ -16,6 +16,7 @@ SRC=./source/ft_atoi.c \
 		 ./source/ft_memmove.c \
 		 ./source/ft_memchr.c \
 		 ./source/ft_memcmp.c \
+		 ./source/ft_memjoin.c \
 		 ./source/ft_strlen.c \
 		 ./source/ft_strlcpy.c \
 		 ./source/ft_strlcat.c \
